@@ -1,0 +1,14 @@
+{
+  "name": "node-starter",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "frontend": "echo 'Frontend not configured yet'",
+    "backend": "cd backend && python run_server.py",
+    "install-backend": "pip install -r requirements.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
