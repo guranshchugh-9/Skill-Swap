@@ -22,11 +22,11 @@ class SkillSwapDatabase:
             
             self.db = firestore.client()
             self.initialized = True
-            print("✅ Database initialized successfully")
+            print(" Database initialized successfully")
             return True
             
         except Exception as e:
-            print(f"❌ Database initialization failed: {e}")
+            print(f" Database initialization failed: {e}")
             return False
 
    
@@ -557,7 +557,7 @@ class SkillSwapDatabase:
             for skill in sample_skills:
                 self.create_skill(skill['name'], skill['description'], skill['category'])
             
-            print("✅ Sample skills created successfully")
+            print(" Sample skills created successfully")
             
             # Sample system message
             self.create_system_message(
@@ -567,9 +567,9 @@ class SkillSwapDatabase:
                 'announcement'
             )
             
-            print("✅ Sample system message created")
+            print("Sample system message created")
             return {'success': True, 'message': 'Sample data created successfully'}
             
         except Exception as e:
-            print(f"❌ Error creating sample data: {e}")
+            print(f" Error creating sample data: {e}")
             return {'success': False, 'error': str(e)}
